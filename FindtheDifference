@@ -1,0 +1,23 @@
+import java.util.Arrays;
+class Solution {
+    public char findTheDifference(String s, String t) {
+        int pos = 0;
+        
+        char[] sChar = s.toCharArray();
+        Arrays.sort(sChar);
+        char[] tChar = t.toCharArray();
+        Arrays.sort(tChar);
+    
+        for(int i = 0; i < s.length(); i++) {
+            //for(int j = 0; j < t.length(); j++) {
+                if(tChar[i] != sChar[i]) {
+                    //break;    
+                //}
+                //else {
+                    return tChar[i];                    
+                //}
+            }
+        }
+        return tChar[tChar.length - 1];
+    }
+}
